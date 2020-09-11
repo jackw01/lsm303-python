@@ -165,8 +165,8 @@ class LSM303(object):
 
         return (
             mag_raw[0] / self._lsb_per_gauss_xy * GAUSS_TO_MICROTESLA,
-            mag_raw[1] / self._lsb_per_gauss_xy * GAUSS_TO_MICROTESLA,
-            mag_raw[2] / self._lsb_per_gauss_z * GAUSS_TO_MICROTESLA,
+            mag_raw[2] / self._lsb_per_gauss_xy * GAUSS_TO_MICROTESLA,
+            mag_raw[1] / self._lsb_per_gauss_z * GAUSS_TO_MICROTESLA,
         )
 
 def _test():
